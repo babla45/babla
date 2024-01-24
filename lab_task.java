@@ -1,13 +1,16 @@
-public interface Shape {
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+interface Shape {
     void draw();
 }
-public class Rectangle implements Shape {
+class Rectangle implements Shape {
     @Override
     public void draw() {
         System.out.println("Inside Rectangle::draw() method.");
     }
 }
-public class Square implements Shape {
+class Square implements Shape {
     @Override
     public void draw() {
         System.out.println("Inside Square::draw() method.");
@@ -16,7 +19,7 @@ public class Square implements Shape {
 
 
 
-public class ShapeFactory {
+class ShapeFactory {
     public Shape getShape(String shapeType){
         if(shapeType == null){
             return null;
@@ -29,7 +32,7 @@ public class ShapeFactory {
         return null;
     }
 }
-public class FactoryPatternDemo {
+class FactoryPatternDemo {
     public static void main(String[] args) {
         ShapeFactory shapeFactory = new ShapeFactory();
         Shape shape1 = shapeFactory.getShape("CIRCLE");shape1.draw();
